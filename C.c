@@ -41,7 +41,7 @@ int main() {
     printf("B = ");
     scanf("%d", &B);
 
-    printf("Output:\n");
+    printf("\nOutput:\n");
     guessNumberGame(A, B);
 
     return 0;

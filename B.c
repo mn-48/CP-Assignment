@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void findPythagoreanTriplets(int start, int end) {
-    printf("Pythagorean Triplets in the range [%d, %d]:\n", start, end);
+void findPythagoreanTriplets_Solution(int start, int end) {
 
     for (int a = start; a <= end; a++) {
         for (int b = a + 1; b <= end; b++) {
@@ -15,22 +14,24 @@ void findPythagoreanTriplets(int start, int end) {
 }
 
 int main() {
-    int start, end;
 
-    // printf("Enter the initial point of the range: ");
+    printf("Input:\n");
+
+    int start, end;
     printf("Initial: ");
     scanf("%d", &start);
-    
-    // printf("Enter the final point of the range: ");
     printf("Final: ");
     scanf("%d", &end);
+
+
+    printf("\nOutput:\n");
 
     if (start < 1 || end <= start) {
         printf("Invalid range. Please enter a valid range with start < end and both >= 1.\n");
         return 1;
     }
 
-    findPythagoreanTriplets(start, end);
+    findPythagoreanTriplets_Solution(start, end);
 
     return 0;
 }

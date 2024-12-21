@@ -60,7 +60,7 @@ int main() {
     printf("N = ");
     scanf("%d", &N);
 
-    printf("Output:\n");
+    printf("\nOutput:\n");
     generateRandomPassword_Solution(N);
 
     return 0;
