@@ -54,13 +54,13 @@ void generateRandomPassword_Solution(int length) {
 }
 
 int main() {
+    printf("Input:\n");
+
     int N;
-    
     printf("N = ");
     scanf("%d", &N);
 
-    srand(time(NULL));
-
+    printf("Output:\n");
     generateRandomPassword_Solution(N);
 
     return 0;
