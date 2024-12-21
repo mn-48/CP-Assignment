@@ -5,7 +5,7 @@
 
 #define SPECIAL_CHARACTERS "!@#$%^&*()_-+=<>?/"
 
-void generatePassword(int length) {
+void generateRandomPassword_Solution(int length) {
     if (length < 6) {
         printf("Password length must be at least 6.\n");
         return;
@@ -18,9 +18,9 @@ void generatePassword(int length) {
     char special = SPECIAL_CHARACTERS[rand() % strlen(SPECIAL_CHARACTERS)];
 
     password[0] = uppercase;
-    password[1] = lowercase;
+    password[1] = special;
     password[2] = number;
-    password[3] = special;
+    password[3] = lowercase;
 
     for (int i = 4; i < length; i++) {
         int category = rand() % 4;
@@ -61,7 +61,7 @@ int main() {
 
     srand(time(NULL));
 
-    generatePassword(N);
+    generateRandomPassword_Solution(N);
 
     return 0;
 }
